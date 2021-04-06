@@ -1,14 +1,21 @@
-Alias:   CT = http://hl7.org/fhir/us/davinci-atr/STU1/ValueSet-atr-changetype
-
-Instance:       ExampleGroup
-InstanceOf:     http://alr.cms.gov/ig/StructureDefinition/alr-Group
-Title:          "Group: General Example"
+Instance:       ExampleCoverage
+InstanceOf:     http://alr.cms.gov/ig/StructureDefinition/alr-Coverage
+Title:          "Coverage: General Example"
 Usage:          #example
-* id = "u87a34de3feaagux8xz"
-* active = true
-* type = #person
-* actual = true
-* name = "General Example of ALR Group"
+* id = "u87a34asdf667de3feaagux8xz"
+* status = #active
+* subscriberId = "-19999000381"
+* beneficiary.reference = "Patient/123"
+* period.start = "2020-01-01"
+* period.end = "2020-12-31"
+* payor.reference = "Organization/123"
+* extension[ext-enrollmentPeriod].extension[period][0].valuePeriod.start = "2020-01-01"
+* extension[ext-enrollmentPeriod].extension[period][0].valuePeriod.end = "2020-06-30"
+* extension[ext-enrollmentPeriod].extension[period][1].valuePeriod.start = "2020-10-01"
+* extension[ext-enrollmentPeriod].extension[period][1].valuePeriod.end = "2020-12-31"
+
+
+/*
 * managingEntity.reference = "Organization/123"
 * managingEntity.display = "Sample Organization"
 * meta.lastUpdated = "2021-04-01T03:04:12.348-04:00"
@@ -29,3 +36,5 @@ Usage:          #example
 * member.extension[ext-newlyAssignedBeneficiaryFlag].valueBoolean = false
 * member.extension[ext-voluntaryAlignmentFlag].valueBoolean = false
 * member[0].entity.reference = "Patient/123"
+
+*/
